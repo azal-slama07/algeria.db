@@ -20,7 +20,7 @@ typedef struct {
     int year;
 } Date;
 
-/Personality, event node
+/* Personality, event node */
 typedef struct TNode {
     char name[MAX_NAME];
     char definition[MAX_DEF];
@@ -67,7 +67,7 @@ typedef struct TTreeNode {
 Date parseDate(const char *s) {
     Date d;
     char temp[MAX_DATE];
-    d = {0, 0, 0};
+    d.day = d.month = d.year = 0;
     
     //checks if the pointer s is NULL;
     if (!s || s[0] == '\0') return d;
